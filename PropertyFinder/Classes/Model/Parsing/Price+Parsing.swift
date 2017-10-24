@@ -8,17 +8,20 @@
 
 import Foundation
 
+private let numberFormatter: NumberFormatter = {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .decimal
+    
+    return formatter
+}()
+
 extension Price: JSONConstructible {
     init?(_ json: JSONFormat) {
         let parser = JSONParser(from: json)
         
         do {
             self.value = try parser.fetch(.price) { (price: String) in
-                let formatter = NumberFormatter()
-                formatter.numberStyle = .decimal
-                formatter.locale = Locale(identifier: "en_GB")
-                
-                guard let num = formatter.number(from: price) else {
+                guard let num = numberFormatter.number(from: price) else {
                     return nil
                 }
                 

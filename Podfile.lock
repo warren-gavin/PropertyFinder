@@ -2,101 +2,101 @@ PODS:
   - Alamofire (4.5.1)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
-  - OBehave (0.0.7):
-    - OBehave/Actions (= 0.0.7)
-    - OBehave/Animations (= 0.0.7)
-    - OBehave/Effects (= 0.0.7)
-    - OBehave/Images (= 0.0.7)
-    - OBehave/Keyboard (= 0.0.7)
-    - OBehave/Tables (= 0.0.7)
-    - OBehave/Tools (= 0.0.7)
-    - OBehave/ViewController (= 0.0.7)
-  - OBehave/Actions (0.0.7):
-    - OBehave/Actions/OpenSettings (= 0.0.7)
-    - OBehave/Actions/PhoneCall (= 0.0.7)
-    - OBehave/Actions/SendMail (= 0.0.7)
-  - OBehave/Actions/OpenSettings (0.0.7)
-  - OBehave/Actions/PhoneCall (0.0.7)
-  - OBehave/Actions/SendMail (0.0.7)
-  - OBehave/Animations (0.0.7):
-    - OBehave/Animations/OverlayView (= 0.0.7)
-    - OBehave/Animations/ResizeView (= 0.0.7)
-    - OBehave/Animations/RotateView (= 0.0.7)
-    - OBehave/Animations/SlideIn (= 0.0.7)
-  - OBehave/Animations/OverlayView (0.0.7)
-  - OBehave/Animations/ResizeView (0.0.7)
-  - OBehave/Animations/RotateView (0.0.7)
-  - OBehave/Animations/SlideIn (0.0.7)
-  - OBehave/Effects (0.0.7):
-    - OBehave/Effects/BlurImage (= 0.0.7)
-    - OBehave/Effects/TintImage (= 0.0.7)
-  - OBehave/Effects/BlurImage (0.0.7)
-  - OBehave/Effects/TintImage (0.0.7)
-  - OBehave/Images (0.0.7):
-    - OBehave/Images/KenBurns (= 0.0.7)
-    - OBehave/Images/Parallax (= 0.0.7)
-    - OBehave/Images/Picker (= 0.0.7)
-    - OBehave/Images/SaveImage (= 0.0.7)
-  - OBehave/Images/KenBurns (0.0.7)
-  - OBehave/Images/Parallax (0.0.7)
-  - OBehave/Images/Picker (0.0.7)
-  - OBehave/Images/SaveImage (0.0.7)
-  - OBehave/Keyboard (0.0.7):
-    - OBehave/Keyboard/Anchored (= 0.0.7)
-    - OBehave/Keyboard/Dynamic (= 0.0.7)
-    - OBehave/Keyboard/Fixed (= 0.0.7)
-  - OBehave/Keyboard/Anchored (0.0.7)
-  - OBehave/Keyboard/Dynamic (0.0.7)
-  - OBehave/Keyboard/Fixed (0.0.7)
-  - OBehave/Tables (0.0.7):
-    - OBehave/Tables/EmptyState (= 0.0.7)
-    - OBehave/Tables/ParallaxHeader (= 0.0.7)
-    - OBehave/Tables/StretchyHeader (= 0.0.7)
-  - OBehave/Tables/EmptyState (0.0.7)
-  - OBehave/Tables/ParallaxHeader (0.0.7)
-  - OBehave/Tables/StretchyHeader (0.0.7)
-  - OBehave/Tools (0.0.7):
-    - OBehave/Tools/BarCodeScanner (= 0.0.7)
-    - OBehave/Tools/ChangeLocalization (= 0.0.7)
-  - OBehave/Tools/BarCodeScanner (0.0.7)
-  - OBehave/Tools/ChangeLocalization (0.0.7)
-  - OBehave/ViewController (0.0.7):
-    - OBehave/ViewController/Lifecycle (= 0.0.7)
-    - OBehave/ViewController/Paging (= 0.0.7)
-    - OBehave/ViewController/Transition (= 0.0.7)
-  - OBehave/ViewController/Lifecycle (0.0.7)
-  - OBehave/ViewController/Paging (0.0.7)
-  - OBehave/ViewController/Transition (0.0.7):
-    - OBehave/ViewController/Transition/Inset (= 0.0.7)
-    - OBehave/ViewController/Transition/Shutter (= 0.0.7)
-    - OBehave/ViewController/Transition/Slide (= 0.0.7)
-  - OBehave/ViewController/Transition/Inset (0.0.7):
-    - OBehave/ViewController/Transition/Inset/BlurredBackground (= 0.0.7)
-    - OBehave/ViewController/Transition/Inset/DimmedBackground (= 0.0.7)
-  - OBehave/ViewController/Transition/Inset/BlurredBackground (0.0.7)
-  - OBehave/ViewController/Transition/Inset/DimmedBackground (0.0.7)
-  - OBehave/ViewController/Transition/Shutter (0.0.7)
-  - OBehave/ViewController/Transition/Slide (0.0.7)
+  - OBehave (0.0.8):
+    - OBehave/Actions (= 0.0.8)
+    - OBehave/Animations (= 0.0.8)
+    - OBehave/Effects (= 0.0.8)
+    - OBehave/Images (= 0.0.8)
+    - OBehave/Keyboard (= 0.0.8)
+    - OBehave/Tables (= 0.0.8)
+    - OBehave/Tools (= 0.0.8)
+    - OBehave/ViewController (= 0.0.8)
+  - OBehave/Actions (0.0.8):
+    - OBehave/Actions/OpenSettings (= 0.0.8)
+    - OBehave/Actions/PhoneCall (= 0.0.8)
+    - OBehave/Actions/SendMail (= 0.0.8)
+  - OBehave/Actions/OpenSettings (0.0.8)
+  - OBehave/Actions/PhoneCall (0.0.8)
+  - OBehave/Actions/SendMail (0.0.8)
+  - OBehave/Animations (0.0.8):
+    - OBehave/Animations/OverlayView (= 0.0.8)
+    - OBehave/Animations/ResizeView (= 0.0.8)
+    - OBehave/Animations/RotateView (= 0.0.8)
+    - OBehave/Animations/SlideIn (= 0.0.8)
+  - OBehave/Animations/OverlayView (0.0.8)
+  - OBehave/Animations/ResizeView (0.0.8)
+  - OBehave/Animations/RotateView (0.0.8)
+  - OBehave/Animations/SlideIn (0.0.8)
+  - OBehave/Effects (0.0.8):
+    - OBehave/Effects/BlurImage (= 0.0.8)
+    - OBehave/Effects/TintImage (= 0.0.8)
+  - OBehave/Effects/BlurImage (0.0.8)
+  - OBehave/Effects/TintImage (0.0.8)
+  - OBehave/Images (0.0.8):
+    - OBehave/Images/KenBurns (= 0.0.8)
+    - OBehave/Images/Parallax (= 0.0.8)
+    - OBehave/Images/Picker (= 0.0.8)
+    - OBehave/Images/SaveImage (= 0.0.8)
+  - OBehave/Images/KenBurns (0.0.8)
+  - OBehave/Images/Parallax (0.0.8)
+  - OBehave/Images/Picker (0.0.8)
+  - OBehave/Images/SaveImage (0.0.8)
+  - OBehave/Keyboard (0.0.8):
+    - OBehave/Keyboard/Anchored (= 0.0.8)
+    - OBehave/Keyboard/Dynamic (= 0.0.8)
+    - OBehave/Keyboard/Fixed (= 0.0.8)
+  - OBehave/Keyboard/Anchored (0.0.8)
+  - OBehave/Keyboard/Dynamic (0.0.8)
+  - OBehave/Keyboard/Fixed (0.0.8)
+  - OBehave/Tables (0.0.8):
+    - OBehave/Tables/EmptyState (= 0.0.8)
+    - OBehave/Tables/ParallaxHeader (= 0.0.8)
+    - OBehave/Tables/StretchyHeader (= 0.0.8)
+  - OBehave/Tables/EmptyState (0.0.8)
+  - OBehave/Tables/ParallaxHeader (0.0.8)
+  - OBehave/Tables/StretchyHeader (0.0.8)
+  - OBehave/Tools (0.0.8):
+    - OBehave/Tools/BarCodeScanner (= 0.0.8)
+    - OBehave/Tools/ChangeLocalization (= 0.0.8)
+  - OBehave/Tools/BarCodeScanner (0.0.8)
+  - OBehave/Tools/ChangeLocalization (0.0.8)
+  - OBehave/ViewController (0.0.8):
+    - OBehave/ViewController/Lifecycle (= 0.0.8)
+    - OBehave/ViewController/Paging (= 0.0.8)
+    - OBehave/ViewController/Transition (= 0.0.8)
+  - OBehave/ViewController/Lifecycle (0.0.8)
+  - OBehave/ViewController/Paging (0.0.8)
+  - OBehave/ViewController/Transition (0.0.8):
+    - OBehave/ViewController/Transition/Inset (= 0.0.8)
+    - OBehave/ViewController/Transition/Shutter (= 0.0.8)
+    - OBehave/ViewController/Transition/Slide (= 0.0.8)
+  - OBehave/ViewController/Transition/Inset (0.0.8):
+    - OBehave/ViewController/Transition/Inset/BlurredBackground (= 0.0.8)
+    - OBehave/ViewController/Transition/Inset/DimmedBackground (= 0.0.8)
+  - OBehave/ViewController/Transition/Inset/BlurredBackground (0.0.8)
+  - OBehave/ViewController/Transition/Inset/DimmedBackground (0.0.8)
+  - OBehave/ViewController/Transition/Shutter (0.0.8)
+  - OBehave/ViewController/Transition/Slide (0.0.8)
 
 DEPENDENCIES:
   - AlamofireImage
-  - OBehave (from `https://github.com/warren-gavin/OBehave.git`, tag `0.0.7`)
+  - OBehave (from `https://github.com/warren-gavin/OBehave.git`, tag `0.0.8`)
 
 EXTERNAL SOURCES:
   OBehave:
     :git: https://github.com/warren-gavin/OBehave.git
-    :tag: 0.0.7
+    :tag: 0.0.8
 
 CHECKOUT OPTIONS:
   OBehave:
     :git: https://github.com/warren-gavin/OBehave.git
-    :tag: 0.0.7
+    :tag: 0.0.8
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
-  OBehave: 94df5c67a106e638efb873d509a22b1bbe0af461
+  OBehave: 953754b953358c984c56d977a718e5d55d9d05ec
 
-PODFILE CHECKSUM: ad0d07010a02b542305e6cf72adf46b21d0dcf2c
+PODFILE CHECKSUM: faba4e54a6981b3ca1fbc40ca25570c79833fbf4
 
 COCOAPODS: 1.2.0

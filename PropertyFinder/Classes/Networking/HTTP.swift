@@ -8,7 +8,7 @@
 
 import Foundation
 
-public typealias Parameters = [String: Any]
+public typealias Parameters = [String: String]
 public typealias Headers    = [String: String]
 public typealias Response   = [String: String]
 

@@ -5,23 +5,91 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Property List View Controller-->
+        <!--Owner-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PropertyListViewController" customModule="PropertyFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rhD-fi-6ib">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="98" id="cT2-xm-s5h">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cT2-xm-s5h" id="Qmb-qV-4yi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rhD-fi-6ib" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2N3-zv-uFU"/>
+                            <constraint firstItem="rhD-fi-6ib" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TgI-tx-YNr"/>
+                            <constraint firstItem="rhD-fi-6ib" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kKl-bm-rrD"/>
+                            <constraint firstItem="rhD-fi-6ib" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ncM-Gn-e5J"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emptyStateView" destination="jjb-Sp-cja" id="SFD-1f-ovJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="MQg-mL-WLO" customClass="DisplaySearchResultsBehavior" customModule="PropertyFinder" customModuleProvider="target">
+                    <connections>
+                        <outlet property="owner" destination="BYZ-38-t0r" id="TFn-KP-Zf1"/>
+                        <outlet property="tableView" destination="rhD-fi-6ib" id="C2N-nu-NnK"/>
+                    </connections>
+                </customObject>
+                <customObject id="kYH-cN-M4p" customClass="OBEmptyStateBehavior" customModule="OBehave">
+                    <connections>
+                        <outlet property="owner" destination="BYZ-38-t0r" id="Vtl-FD-MKf"/>
+                        <outlet property="scrollView" destination="rhD-fi-6ib" id="Ptu-AD-04M"/>
+                    </connections>
+                </customObject>
+                <view contentMode="scaleToFill" id="jjb-Sp-cja">
+                    <rect key="frame" x="0.0" y="0.0" width="394" height="445"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hmd-7n-WtQ">
+                            <rect key="frame" x="39.5" y="183" width="315" height="79"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just a moment..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfE-Ii-8aL">
+                                    <rect key="frame" x="0.0" y="0.0" width="315" height="18"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                    <color key="textColor" red="0.062745098040000002" green="0.12549019610000001" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="59H-EI-XRO">
+                                    <rect key="frame" x="0.0" y="42" width="315" height="37"/>
+                                    <color key="color" red="0.062745098040000002" green="0.12549019610000001" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </activityIndicatorView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="hmd-7n-WtQ" firstAttribute="width" secondItem="EQE-c1-DIW" secondAttribute="width" multiplier="0.8" id="3tc-g2-BX1"/>
+                        <constraint firstItem="hmd-7n-WtQ" firstAttribute="centerY" secondItem="EQE-c1-DIW" secondAttribute="centerY" id="Sa0-Y3-CQy"/>
+                        <constraint firstItem="hmd-7n-WtQ" firstAttribute="centerX" secondItem="EQE-c1-DIW" secondAttribute="centerX" id="T2b-9q-qZQ"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="EQE-c1-DIW"/>
+                </view>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.062745098040000002" green="0.12549019610000001" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -7,30 +7,30 @@
 //
 
 import UIKit
+import OBehave
 
-class PropertyListViewController: UIViewController {
-    var serviceUrl = URL(string: "https://www.propertyfinder.ae/mobileapi?page=0&order=pa")!
-    var downloader = NetworkDownloader()
+class PropertyListViewController: UIViewController, DisplaySearchResultsBehaviorDataSource {
+    @IBOutlet var emptyStateView: UIView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        searchForProperties()
+    private var sort = SortParameters(criterion: .bedrooms, direction: .descending)
+    private var page = 0
+    
+    // MARK: DisplaySearchResultsBehaviorDataSource
+    var downloadURL = URL.baseURL
+    var downloader: Downloader = NetworkDownloader()
+    var searchParameters: Parameters {
+        return [.page:  "\(page)", .order: sort.encoding]
     }
 }
 
-private extension PropertyListViewController {
-    func searchForProperties() {
-        let config = HTTP.Config(method: .get)
-        HTTP.download(url: serviceUrl, config: config, downloader: downloader) { (result: DownloadResult<SearchResponse>) in
-            switch result {
-            case .success(let response):
-                response.properties.forEach {
-                    print($0.subject)
-                }
-                
-            case .failure(_):
-                fatalError("Totally failed to get this to work")
-            }
-        }
+// MARK: - OBEmptyStateBehaviorDataSource
+extension PropertyListViewController: OBEmptyStateBehaviorDataSource {
+    func viewToDisplayOnEmpty(for behavior: OBEmptyStateBehavior?) -> UIView? {
+        return emptyStateView
     }
+}
+
+private extension String {
+    static let page  = "page"
+    static let order = "order"
 }

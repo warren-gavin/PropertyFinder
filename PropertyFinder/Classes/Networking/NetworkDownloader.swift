@@ -44,16 +44,20 @@ public struct NetworkDownloader: Downloader {
 
 private extension NetworkDownloader {
     func request(for url: URL, config: HTTP.Config) -> URLRequest {
-        var request = URLRequest(url: url)
+        var request: URLRequest = {
+            guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+                return URLRequest(url: url)
+            }
+            
+            components.queryItems = config.parameters?.map { key, value in
+                URLQueryItem(name: key, value: value)
+            }
 
+            return URLRequest(url: components.url ?? url)
+        }()
+        
         request.httpMethod = config.method.text
         request.allHTTPHeaderFields = config.headers
-        
-        if let json = config.parameters?.json {
-            request.httpBody = json
-            request.addValue(ApplicationType.json, forHTTPHeaderField: HTTP.Header.contentType)
-            request.addValue(ApplicationType.json, forHTTPHeaderField: HTTP.Header.accept)
-        }
 
         return request
     }

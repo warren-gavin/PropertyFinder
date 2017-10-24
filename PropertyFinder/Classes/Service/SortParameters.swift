@@ -1,5 +1,5 @@
 //
-//  SearchSortOrder.swift
+//  SortParameters.swift
 //  PropertyFinder
 //
 //  Created by Apokrupto on 24/10/2017.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct SearchSortOrder {
+struct SortParameters {
     let criterion: SortCriterion
     let direction: SortDirection
     
-    var code: String {
-        return "\(criterion.code)\(direction.code)"
+    var encoding: String {
+        return "\(criterion.encoding)\(direction.encoding)"
     }
 }
 
@@ -21,7 +21,7 @@ enum SortCriterion {
     case price
     case bedrooms
     
-    var code: String {
+    var encoding: String {
         switch self {
         case .price:
             return "p"
@@ -36,7 +36,7 @@ enum SortDirection {
     case ascending
     case descending
     
-    var code: String {
+    var encoding: String {
         switch self {
         case .ascending:
             return "a"

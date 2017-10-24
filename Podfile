@@ -6,7 +6,7 @@ use_frameworks!
 def all_pods
 
 pod 'AlamofireImage'
-pod 'OBehave', git: 'https://github.com/warren-gavin/OBehave.git', :tag => '0.0.7'
+pod 'OBehave', git: 'https://github.com/warren-gavin/OBehave.git', :tag => '0.0.8'
 
 end
 
