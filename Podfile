@@ -6,8 +6,19 @@ use_frameworks!
 def all_pods
 
 pod 'AlamofireImage'
+pod 'OBehave', git: 'https://github.com/warren-gavin/OBehave.git', :tag => '0.0.7'
 
 end
+
+target 'PropertyFinder' do
+  project 'PropertyFinder.xcodeproj'
+  all_pods
+
+  target 'PropertyFinderTests' do
+    inherit! :search_paths
+  end
+end
+
 
 post_install do |installer|
   require 'fileutils'
