@@ -7,6 +7,7 @@
 //
 
 import OBehave
+import APDownloader
 
 protocol DisplaySearchResultsBehaviorDataSource: OBBehaviorDataSource {
     var downloadURL: URL { get }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import APDownloader
 
 extension SearchResponse: JSONConstructible {
     init?(_ json: JSONFormat) {

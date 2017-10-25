@@ -8,6 +8,7 @@
 
 import UIKit
 import OBehave
+import APDownloader
 
 class PropertyListViewController: UIViewController, DisplaySearchResultsBehaviorDataSource {
     @IBOutlet var emptyStateView: UIView!
@@ -19,6 +20,10 @@ class PropertyListViewController: UIViewController, DisplaySearchResultsBehavior
     var downloadURL = URL.baseURL
     var downloader: Downloader = NetworkDownloader()
     var searchParameters: Parameters {
+        defer {
+            page += 1
+        }
+        
         return [.page:  "\(page)", .order: sort.encoding]
     }
 }

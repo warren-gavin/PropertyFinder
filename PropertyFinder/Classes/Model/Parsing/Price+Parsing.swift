@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import APDownloader
 
 private let numberFormatter: NumberFormatter = {
     let formatter = NumberFormatter()

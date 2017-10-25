@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import APDownloader
 
 extension Broker: JSONConstructible {
     init?(_ json: JSONFormat) {

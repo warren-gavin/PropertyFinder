@@ -7,6 +7,7 @@ def all_pods
 
 pod 'AlamofireImage'
 pod 'OBehave', git: 'https://github.com/warren-gavin/OBehave.git', :tag => '0.0.8'
+pod 'APDownloader', git: 'https://github.com/warren-gavin/APDownloader.git', :tag => '0.0.1'
 
 end
 

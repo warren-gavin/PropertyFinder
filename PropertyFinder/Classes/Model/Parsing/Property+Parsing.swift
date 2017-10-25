@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import APDownloader
 
 extension Property: JSONConstructible {
     init?(_ json: JSONFormat) {

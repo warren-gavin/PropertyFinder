@@ -16,16 +16,7 @@
 		B045AA981F9F8768005D8DA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B045AA971F9F8768005D8DA8 /* Assets.xcassets */; };
 		B045AA9B1F9F8768005D8DA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045AA991F9F8768005D8DA8 /* LaunchScreen.storyboard */; };
 		B045AAA61F9F8769005D8DA8 /* PropertyFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAA51F9F8769005D8DA8 /* PropertyFinderTests.swift */; };
-		B045AAB31F9F87BF005D8DA8 /* JSONParser+Bloomlife.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAB01F9F87BF005D8DA8 /* JSONParser+Bloomlife.swift */; };
-		B045AAB41F9F87BF005D8DA8 /* JSONConstructible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAB11F9F87BF005D8DA8 /* JSONConstructible.swift */; };
-		B045AAB51F9F87BF005D8DA8 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAB21F9F87BF005D8DA8 /* JSONParser.swift */; };
-		B045AAB71F9F87F1005D8DA8 /* NetworkDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAB61F9F87F1005D8DA8 /* NetworkDownloader.swift */; };
-		B045AAB91F9F87F7005D8DA8 /* NetworkIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAB81F9F87F7005D8DA8 /* NetworkIndicator.swift */; };
-		B045AABB1F9F8803005D8DA8 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AABA1F9F8803005D8DA8 /* Downloader.swift */; };
-		B045AABE1F9F8836005D8DA8 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AABD1F9F8836005D8DA8 /* HTTP.swift */; };
-		B045AAC01F9F8886005D8DA8 /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AABF1F9F8886005D8DA8 /* Data+JSON.swift */; };
 		B045AAC31F9F88AB005D8DA8 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAC21F9F88AA005D8DA8 /* EnumCollection.swift */; };
-		B045AAC61F9F88E8005D8DA8 /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAC51F9F88E8005D8DA8 /* Dictionary+JSON.swift */; };
 		B045AAC81F9F8A82005D8DA8 /* PropertyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAC71F9F8A82005D8DA8 /* PropertyListViewController.swift */; };
 		B045AACB1F9F8A96005D8DA8 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AACA1F9F8A96005D8DA8 /* Property.swift */; };
 		B045AACE1F9F8ACF005D8DA8 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AACD1F9F8ACF005D8DA8 /* Identifier.swift */; };
@@ -73,16 +64,7 @@
 		B045AAA11F9F8769005D8DA8 /* PropertyFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropertyFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B045AAA51F9F8769005D8DA8 /* PropertyFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFinderTests.swift; sourceTree = "<group>"; };
 		B045AAA71F9F8769005D8DA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B045AAB01F9F87BF005D8DA8 /* JSONParser+Bloomlife.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONParser+Bloomlife.swift"; sourceTree = "<group>"; };
-		B045AAB11F9F87BF005D8DA8 /* JSONConstructible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConstructible.swift; sourceTree = "<group>"; };
-		B045AAB21F9F87BF005D8DA8 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
-		B045AAB61F9F87F1005D8DA8 /* NetworkDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDownloader.swift; sourceTree = "<group>"; };
-		B045AAB81F9F87F7005D8DA8 /* NetworkIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkIndicator.swift; sourceTree = "<group>"; };
-		B045AABA1F9F8803005D8DA8 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
-		B045AABD1F9F8836005D8DA8 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
-		B045AABF1F9F8886005D8DA8 /* Data+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSON.swift"; sourceTree = "<group>"; };
 		B045AAC21F9F88AA005D8DA8 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
-		B045AAC51F9F88E8005D8DA8 /* Dictionary+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSON.swift"; sourceTree = "<group>"; };
 		B045AAC71F9F8A82005D8DA8 /* PropertyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewController.swift; sourceTree = "<group>"; };
 		B045AACA1F9F8A96005D8DA8 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		B045AACD1F9F8ACF005D8DA8 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
@@ -176,29 +158,6 @@
 			path = PropertyFinderTests;
 			sourceTree = "<group>";
 		};
-		B045AABC1F9F880D005D8DA8 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				B045AABA1F9F8803005D8DA8 /* Downloader.swift */,
-				B045AABD1F9F8836005D8DA8 /* HTTP.swift */,
-				B045AAB61F9F87F1005D8DA8 /* NetworkDownloader.swift */,
-				B045AAB81F9F87F7005D8DA8 /* NetworkIndicator.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		B045AAC11F9F8889005D8DA8 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				B045AABF1F9F8886005D8DA8 /* Data+JSON.swift */,
-				B045AAC51F9F88E8005D8DA8 /* Dictionary+JSON.swift */,
-				B045AAB11F9F87BF005D8DA8 /* JSONConstructible.swift */,
-				B045AAB21F9F87BF005D8DA8 /* JSONParser.swift */,
-				B045AAB01F9F87BF005D8DA8 /* JSONParser+Bloomlife.swift */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
 		B045AAC41F9F88AE005D8DA8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,9 +232,7 @@
 				B09B23F11F9F9279003A7053 /* Application */,
 				B060FBC01F9FB6980085570B /* Behaviors */,
 				B045AAC91F9F8A86005D8DA8 /* Controllers */,
-				B045AAC11F9F8889005D8DA8 /* JSON */,
 				B045AACC1F9F8A9D005D8DA8 /* Model */,
-				B045AABC1F9F880D005D8DA8 /* Networking */,
 				B09B23FB1F9F9863003A7053 /* Service */,
 				B045AAC41F9F88AE005D8DA8 /* Tools */,
 			);
@@ -517,8 +474,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B09B23ED1F9F90CC003A7053 /* Agent.swift in Sources */,
-				B045AAB31F9F87BF005D8DA8 /* JSONParser+Bloomlife.swift in Sources */,
-				B045AABB1F9F8803005D8DA8 /* Downloader.swift in Sources */,
 				B09B23FF1F9F99D0003A7053 /* Broker+Parsing.swift in Sources */,
 				B09B24041F9F9FBD003A7053 /* SortParameters.swift in Sources */,
 				B045AADA1F9F8E88005D8DA8 /* Location.swift in Sources */,
@@ -526,19 +481,13 @@
 				B045AAC81F9F8A82005D8DA8 /* PropertyListViewController.swift in Sources */,
 				B00B06FC1F9FB0F9004B8E37 /* Price+Parsing.swift in Sources */,
 				B09B24061F9FA186003A7053 /* SearchResponse.swift in Sources */,
-				B045AAB41F9F87BF005D8DA8 /* JSONConstructible.swift in Sources */,
 				B045AAD21F9F8C1C005D8DA8 /* Currency.swift in Sources */,
 				B045AAD41F9F8C2A005D8DA8 /* Price.swift in Sources */,
-				B045AAB71F9F87F1005D8DA8 /* NetworkDownloader.swift in Sources */,
-				B045AAC01F9F8886005D8DA8 /* Data+JSON.swift in Sources */,
 				B045AACB1F9F8A96005D8DA8 /* Property.swift in Sources */,
-				B045AAB51F9F87BF005D8DA8 /* JSONParser.swift in Sources */,
 				B09B23F81F9F94D3003A7053 /* Agent+Parsing.swift in Sources */,
 				B09B24011F9F9AB4003A7053 /* Location+Parsing.swift in Sources */,
-				B045AABE1F9F8836005D8DA8 /* HTTP.swift in Sources */,
 				B045AAD81F9F8C72005D8DA8 /* Amenities.swift in Sources */,
 				B05DFA951F9FD4F600CDC704 /* Property+Parsing.swift in Sources */,
-				B045AAB91F9F87F7005D8DA8 /* NetworkIndicator.swift in Sources */,
 				B045AACE1F9F8ACF005D8DA8 /* Identifier.swift in Sources */,
 				B045AAD01F9F8C00005D8DA8 /* Email.swift in Sources */,
 				B02A325A1F9FA4A600FD37D3 /* SearchResponse+Parsing.swift in Sources */,
@@ -546,7 +495,6 @@
 				B045AA911F9F8768005D8DA8 /* AppDelegate.swift in Sources */,
 				B060FBC21F9FB6AB0085570B /* DisplaySearchResultsBehavior.swift in Sources */,
 				B045AAD61F9F8C3B005D8DA8 /* Broker.swift in Sources */,
-				B045AAC61F9F88E8005D8DA8 /* Dictionary+JSON.swift in Sources */,
 				B05DFA931F9FD0C200CDC704 /* URL+App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.5.1)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - APDownloader (0.0.1)
   - OBehave (0.0.8):
     - OBehave/Actions (= 0.0.8)
     - OBehave/Animations (= 0.0.8)
@@ -80,14 +81,21 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage
+  - APDownloader (from `https://github.com/warren-gavin/APDownloader.git`, tag `0.0.1`)
   - OBehave (from `https://github.com/warren-gavin/OBehave.git`, tag `0.0.8`)
 
 EXTERNAL SOURCES:
+  APDownloader:
+    :git: https://github.com/warren-gavin/APDownloader.git
+    :tag: 0.0.1
   OBehave:
     :git: https://github.com/warren-gavin/OBehave.git
     :tag: 0.0.8
 
 CHECKOUT OPTIONS:
+  APDownloader:
+    :git: https://github.com/warren-gavin/APDownloader.git
+    :tag: 0.0.1
   OBehave:
     :git: https://github.com/warren-gavin/OBehave.git
     :tag: 0.0.8
@@ -95,8 +103,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  APDownloader: e23229d510f27701065090b08dc8aaa8b74b1b22
   OBehave: 953754b953358c984c56d977a718e5d55d9d05ec
 
-PODFILE CHECKSUM: faba4e54a6981b3ca1fbc40ca25570c79833fbf4
+PODFILE CHECKSUM: 0a2ae769321b56b482af01bae6dd0656f1450337
 
 COCOAPODS: 1.2.0
