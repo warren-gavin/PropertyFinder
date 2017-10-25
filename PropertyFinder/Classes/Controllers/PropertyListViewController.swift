@@ -10,22 +10,8 @@ import UIKit
 import OBehave
 import APDownloader
 
-class PropertyListViewController: UIViewController, DisplaySearchResultsBehaviorDataSource {
+class PropertyListViewController: UIViewController {
     @IBOutlet var emptyStateView: UIView!
-    
-    private var sort = SortParameters(criterion: .bedrooms, direction: .descending)
-    private var page = 0
-    
-    // MARK: DisplaySearchResultsBehaviorDataSource
-    var downloadURL = URL.baseURL
-    var downloader: Downloader = NetworkDownloader()
-    var searchParameters: Parameters {
-        defer {
-            page += 1
-        }
-        
-        return [.page:  "\(page)", .order: sort.encoding]
-    }
 }
 
 // MARK: - OBEmptyStateBehaviorDataSource
@@ -33,9 +19,4 @@ extension PropertyListViewController: OBEmptyStateBehaviorDataSource {
     func viewToDisplayOnEmpty(for behavior: OBEmptyStateBehavior?) -> UIView? {
         return emptyStateView
     }
-}
-
-private extension String {
-    static let page  = "page"
-    static let order = "order"
 }

@@ -17,7 +17,7 @@ struct SortParameters {
     }
 }
 
-enum SortCriterion {
+enum SortCriterion: EnumCollection {
     case price
     case bedrooms
     
@@ -32,7 +32,7 @@ enum SortCriterion {
     }
 }
 
-enum SortDirection {
+enum SortDirection: EnumCollection {
     case ascending
     case descending
     

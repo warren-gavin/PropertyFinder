@@ -13,4 +13,8 @@ enum Currency: String {
     case euro   = "EUR"
     case dollar = "USD"
     case pound  = "GBP"
+    
+    var code: String {
+        return rawValue
+    }
 }
