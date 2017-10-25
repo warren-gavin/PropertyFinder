@@ -48,7 +48,7 @@ private extension DisplaySearchResultsBehavior {
                       downloader: delegate.downloader) { [unowned self] (result: DownloadResult<SearchResponse>) in
             switch result {
             case .success(let response):
-                self.properties = response.properties
+                self.properties.append(contentsOf: response.properties)
                 
             case .failure(_):
                 fatalError("Totally failed to get this to work")
