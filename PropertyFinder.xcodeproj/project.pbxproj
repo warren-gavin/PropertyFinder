@@ -17,7 +17,6 @@
 		B045AA9B1F9F8768005D8DA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045AA991F9F8768005D8DA8 /* LaunchScreen.storyboard */; };
 		B045AAA61F9F8769005D8DA8 /* PropertyFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAA51F9F8769005D8DA8 /* PropertyFinderTests.swift */; };
 		B045AAC31F9F88AB005D8DA8 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAC21F9F88AA005D8DA8 /* EnumCollection.swift */; };
-		B045AAC81F9F8A82005D8DA8 /* PropertyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AAC71F9F8A82005D8DA8 /* PropertyListViewController.swift */; };
 		B045AACB1F9F8A96005D8DA8 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AACA1F9F8A96005D8DA8 /* Property.swift */; };
 		B045AACE1F9F8ACF005D8DA8 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AACD1F9F8ACF005D8DA8 /* Identifier.swift */; };
 		B045AAD01F9F8C00005D8DA8 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045AACF1F9F8C00005D8DA8 /* Email.swift */; };
@@ -29,6 +28,7 @@
 		B05DFA931F9FD0C200CDC704 /* URL+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DFA921F9FD0C200CDC704 /* URL+App.swift */; };
 		B05DFA951F9FD4F600CDC704 /* Property+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DFA941F9FD4F600CDC704 /* Property+Parsing.swift */; };
 		B060FBC21F9FB6AB0085570B /* DisplaySearchResultsBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060FBC11F9FB6AB0085570B /* DisplaySearchResultsBehavior.swift */; };
+		B087534E1FA1E0C80018802B /* EmptyStateBehaviorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087534D1FA1E0C80018802B /* EmptyStateBehaviorDataSource.swift */; };
 		B09B23ED1F9F90CC003A7053 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09B23EC1F9F90CC003A7053 /* Agent.swift */; };
 		B09B23F81F9F94D3003A7053 /* Agent+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09B23F71F9F94D3003A7053 /* Agent+Parsing.swift */; };
 		B09B23FD1F9F9885003A7053 /* JSONResponseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09B23FC1F9F9885003A7053 /* JSONResponseKeys.swift */; };
@@ -71,7 +71,6 @@
 		B045AAA51F9F8769005D8DA8 /* PropertyFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFinderTests.swift; sourceTree = "<group>"; };
 		B045AAA71F9F8769005D8DA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B045AAC21F9F88AA005D8DA8 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
-		B045AAC71F9F8A82005D8DA8 /* PropertyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewController.swift; sourceTree = "<group>"; };
 		B045AACA1F9F8A96005D8DA8 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		B045AACD1F9F8ACF005D8DA8 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		B045AACF1F9F8C00005D8DA8 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		B05DFA921F9FD0C200CDC704 /* URL+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+App.swift"; sourceTree = "<group>"; };
 		B05DFA941F9FD4F600CDC704 /* Property+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Property+Parsing.swift"; sourceTree = "<group>"; };
 		B060FBC11F9FB6AB0085570B /* DisplaySearchResultsBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySearchResultsBehavior.swift; sourceTree = "<group>"; };
+		B087534D1FA1E0C80018802B /* EmptyStateBehaviorDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateBehaviorDataSource.swift; sourceTree = "<group>"; };
 		B09B23EC1F9F90CC003A7053 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		B09B23F71F9F94D3003A7053 /* Agent+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Agent+Parsing.swift"; sourceTree = "<group>"; };
 		B09B23FC1F9F9885003A7053 /* JSONResponseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResponseKeys.swift; sourceTree = "<group>"; };
@@ -179,14 +179,6 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		B045AAC91F9F8A86005D8DA8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				B045AAC71F9F8A82005D8DA8 /* PropertyListViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		B045AACC1F9F8A9D005D8DA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +201,7 @@
 			children = (
 				B060FBC11F9FB6AB0085570B /* DisplaySearchResultsBehavior.swift */,
 				B0D81E541FA0EBC50099DC4F /* SearchBehavior.swift */,
+				B087534D1FA1E0C80018802B /* EmptyStateBehaviorDataSource.swift */,
 			);
 			path = Behaviors;
 			sourceTree = "<group>";
@@ -244,7 +237,6 @@
 			children = (
 				B09B23F11F9F9279003A7053 /* Application */,
 				B060FBC01F9FB6980085570B /* Behaviors */,
-				B045AAC91F9F8A86005D8DA8 /* Controllers */,
 				B045AACC1F9F8A9D005D8DA8 /* Model */,
 				B09B23FB1F9F9863003A7053 /* Service */,
 				B045AAC41F9F88AE005D8DA8 /* Tools */,
@@ -514,7 +506,6 @@
 				B09B24041F9F9FBD003A7053 /* SortParameters.swift in Sources */,
 				B045AADA1F9F8E88005D8DA8 /* Location.swift in Sources */,
 				B09B23FD1F9F9885003A7053 /* JSONResponseKeys.swift in Sources */,
-				B045AAC81F9F8A82005D8DA8 /* PropertyListViewController.swift in Sources */,
 				B00B06FC1F9FB0F9004B8E37 /* Price+Parsing.swift in Sources */,
 				B09B24061F9FA186003A7053 /* SearchResponse.swift in Sources */,
 				B045AAD21F9F8C1C005D8DA8 /* Currency.swift in Sources */,
@@ -524,6 +515,7 @@
 				B09B23F81F9F94D3003A7053 /* Agent+Parsing.swift in Sources */,
 				B09B24011F9F9AB4003A7053 /* Location+Parsing.swift in Sources */,
 				B0D81E5F1FA109FA0099DC4F /* PropertyViewModel.swift in Sources */,
+				B087534E1FA1E0C80018802B /* EmptyStateBehaviorDataSource.swift in Sources */,
 				B045AAD81F9F8C72005D8DA8 /* Amenities.swift in Sources */,
 				B0D81E551FA0EBC50099DC4F /* SearchBehavior.swift in Sources */,
 				B05DFA951F9FD4F600CDC704 /* Property+Parsing.swift in Sources */,
