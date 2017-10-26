@@ -9,6 +9,13 @@
 import Foundation
 
 struct PropertyViewModel {
+    private static let currencyFormatter: NumberFormatter = {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.numberStyle = .currency
+        
+        return currencyFormatter
+    }()
+
     private let property: Property
     
     init(_ property: Property) {
@@ -16,11 +23,11 @@ struct PropertyViewModel {
     }
     
     var title: String {
-        return "\(property.title), \(property.location)".capitalized
+        return property.subject.capitalized
     }
     
     var subject: String {
-        return property.subject.capitalized
+        return property.location.capitalized
     }
     
     var thumbnail: URL? {
@@ -33,11 +40,7 @@ struct PropertyViewModel {
     }
     
     var price: String {
-        let currencyFormatter = NumberFormatter()
-        currencyFormatter.currencyCode = property.price.currency.code
-        currencyFormatter.numberStyle = .currency
-        
-        let value = property.price.value as NSNumber
-        return currencyFormatter.string(from: value) ?? ""
+        PropertyViewModel.currencyFormatter.currencyCode = property.price.currency.code
+        return PropertyViewModel.currencyFormatter.string(from: property.price.value as NSNumber) ?? ""
     }
 }
