@@ -1,5 +1,5 @@
 //
-//  SearchBehavior.swift
+//  SearchBehaviorDataSource.swift
 //  PropertyFinder
 //
 //  Created by Apokrupto on 25/10/2017.
@@ -9,7 +9,7 @@
 import OBehave
 import APDownloader
 
-class SearchBehavior: OBBehavior, DisplaySearchResultsBehaviorDataSource {
+class SearchBehaviorDataSource: OBBehavior, DisplaySearchResultsBehaviorDataSource {
     @IBOutlet var directionSegment: UISegmentedControl? {
         didSet {
             initialize(segmentControl: directionSegment, with: sortDirection, startingIndex: directionIndex)
@@ -42,7 +42,7 @@ class SearchBehavior: OBBehavior, DisplaySearchResultsBehaviorDataSource {
     }
 }
 
-private extension SearchBehavior {
+private extension SearchBehaviorDataSource {
     func initialize(segmentControl: UISegmentedControl?, with titles: [CustomTextConvertible], startingIndex: Int) {
         zip(titles, (0 ..< titles.count)).forEach {
             segmentControl?.setTitle($0.text, forSegmentAt: $1)
@@ -52,7 +52,7 @@ private extension SearchBehavior {
     }
 }
 
-extension SearchBehavior: DisplaySearchResultsBehaviorDelegate {
+extension SearchBehaviorDataSource: DisplaySearchResultsBehaviorDelegate {
     func resetSearch(for behavior: DisplaySearchResultsBehavior) {
         sortIndex = sortCriteriaSegment?.selectedSegmentIndex ?? 0
         directionIndex = directionSegment?.selectedSegmentIndex ?? 0

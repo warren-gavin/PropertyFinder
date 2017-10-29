@@ -87,6 +87,28 @@
                                             <outlet property="title" destination="8RM-LU-Df2" id="1vg-l0-5kM"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchingTableViewCell" id="Onk-OY-k89" customClass="SearchingTableViewCell" customModule="PropertyFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="225" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Onk-OY-k89" id="DI9-yE-UmQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="X0J-7W-lbk">
+                                                    <rect key="frame" x="177" y="11" width="20" height="21"/>
+                                                    <color key="color" red="0.062745098040000002" green="0.12549019610000001" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="X0J-7W-lbk" secondAttribute="bottom" constant="11" id="EIG-zr-RVv"/>
+                                                <constraint firstItem="X0J-7W-lbk" firstAttribute="top" secondItem="DI9-yE-UmQ" secondAttribute="top" constant="11" id="d3e-zU-bXE"/>
+                                                <constraint firstItem="X0J-7W-lbk" firstAttribute="centerX" secondItem="DI9-yE-UmQ" secondAttribute="centerX" id="gC0-FC-EUf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="X0J-7W-lbk" id="bU2-Z3-M3j"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKt-hA-BbV">
@@ -186,13 +208,13 @@
                     <navigationItem key="navigationItem" title="Property AE" id="vl3-KL-7dC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="HTL-3M-YHH" customClass="EmptyStateBehaviorDataSource" customModule="PropertyFinder" customModuleProvider="target">
+                <customObject id="HTL-3M-YHH" userLabel="Empty State Data Source" customClass="EmptyStateBehaviorDataSource" customModule="PropertyFinder" customModuleProvider="target">
                     <connections>
                         <outlet property="emptyStateView" destination="jjb-Sp-cja" id="93m-tW-489"/>
                         <outlet property="owner" destination="BYZ-38-t0r" id="Tqp-bH-iUz"/>
                     </connections>
                 </customObject>
-                <customObject id="TBt-0E-LkH" customClass="SearchBehavior" customModule="PropertyFinder" customModuleProvider="target">
+                <customObject id="TBt-0E-LkH" userLabel="Search Behavior" customClass="SearchBehaviorDataSource" customModule="PropertyFinder" customModuleProvider="target">
                     <connections>
                         <outlet property="directionSegment" destination="J5I-ks-Ox0" id="Yw5-A4-yuB"/>
                         <outlet property="owner" destination="BYZ-38-t0r" id="wRV-2x-ywx"/>
@@ -219,17 +241,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="394" height="445"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="79" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hmd-7n-WtQ">
-                            <rect key="frame" x="0.0" y="183" width="0.0" height="79"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hmd-7n-WtQ">
+                            <rect key="frame" x="47" y="183" width="300" height="79"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just a moment..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfE-Ii-8aL">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="18"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="18"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                     <color key="textColor" red="0.062745098040000002" green="0.12549019610000001" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="59H-EI-XRO">
-                                    <rect key="frame" x="0.0" y="42" width="0.0" height="37"/>
+                                    <rect key="frame" x="0.0" y="42" width="300" height="37"/>
                                     <color key="color" red="0.062745098040000002" green="0.12549019610000001" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </activityIndicatorView>
                             </subviews>

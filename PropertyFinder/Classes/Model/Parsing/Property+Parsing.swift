@@ -11,7 +11,7 @@ import APDownloader
 
 extension Property: JSONConstructible {
     init?(_ json: JSONFormat) {
-        let parser = JSONParser(from: json)
+        let parser = JSONParser(from: json.filter { (_, value) -> Bool in !(value is NSNull) } )
         
         do {
             self.id             = try parser.fetch(.identifier) { Identifier(id: $0) }
