@@ -9,7 +9,7 @@
 import OBehave
 import APDownloader
 
-class SearchBehaviorDataSource: OBBehavior, DisplaySearchResultsBehaviorDataSource {
+class SearchBehaviorDataSource: OBBehavior, PerformSearchBehaviorDataSource {
     @IBOutlet var directionSegment: UISegmentedControl? {
         didSet {
             initialize(segmentControl: directionSegment, with: sortDirection, startingIndex: directionIndex)
@@ -52,8 +52,9 @@ private extension SearchBehaviorDataSource {
     }
 }
 
-extension SearchBehaviorDataSource: DisplaySearchResultsBehaviorDelegate {
-    func resetSearch(for behavior: DisplaySearchResultsBehavior) {
+// MARK: - PerformSearchBehaviorDataSource
+extension SearchBehaviorDataSource {
+    func resetSearchParameters(for behavior: PerformSearchBehavior) {
         sortIndex = sortCriteriaSegment?.selectedSegmentIndex ?? 0
         directionIndex = directionSegment?.selectedSegmentIndex ?? 0
         page = 0

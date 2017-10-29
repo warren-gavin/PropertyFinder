@@ -177,9 +177,6 @@
                                                     <integer key="value" value="20"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="performSearch:" destination="MQg-mL-WLO" eventType="touchUpInside" id="4w7-hR-9zV"/>
-                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -214,17 +211,23 @@
                         <outlet property="owner" destination="BYZ-38-t0r" id="Tqp-bH-iUz"/>
                     </connections>
                 </customObject>
-                <customObject id="TBt-0E-LkH" userLabel="Search Behavior" customClass="SearchBehaviorDataSource" customModule="PropertyFinder" customModuleProvider="target">
+                <customObject id="dnP-Cg-Ama" userLabel="Search Behavior" customClass="PerformSearchBehavior" customModule="PropertyFinder" customModuleProvider="target">
+                    <connections>
+                        <outlet property="dataSource" destination="TBt-0E-LkH" id="FmF-qJ-tTN"/>
+                        <outlet property="delegate" destination="MQg-mL-WLO" id="Obp-hT-k22"/>
+                        <outlet property="owner" destination="BYZ-38-t0r" id="MxZ-Dd-Ktx"/>
+                    </connections>
+                </customObject>
+                <customObject id="TBt-0E-LkH" userLabel="Search Behavior Data Source" customClass="SearchBehaviorDataSource" customModule="PropertyFinder" customModuleProvider="target">
                     <connections>
                         <outlet property="directionSegment" destination="J5I-ks-Ox0" id="Yw5-A4-yuB"/>
                         <outlet property="owner" destination="BYZ-38-t0r" id="wRV-2x-ywx"/>
                         <outlet property="sortCriteriaSegment" destination="Yhn-ZB-B2l" id="EUO-CV-9E7"/>
                     </connections>
                 </customObject>
-                <customObject id="MQg-mL-WLO" customClass="DisplaySearchResultsBehavior" customModule="PropertyFinder" customModuleProvider="target">
+                <customObject id="MQg-mL-WLO" userLabel="Display Search Behavior" customClass="DisplaySearchResultsBehavior" customModule="PropertyFinder" customModuleProvider="target">
                     <connections>
-                        <outlet property="dataSource" destination="TBt-0E-LkH" id="5Rc-ET-U3c"/>
-                        <outlet property="delegate" destination="TBt-0E-LkH" id="w27-6R-Kde"/>
+                        <outlet property="delegate" destination="dnP-Cg-Ama" id="Gch-g1-fNk"/>
                         <outlet property="owner" destination="BYZ-38-t0r" id="TFn-KP-Zf1"/>
                         <outlet property="searchView" destination="7wa-Qq-g8f" id="Vjo-ZT-fUp"/>
                         <outlet property="tableView" destination="rhD-fi-6ib" id="C2N-nu-NnK"/>

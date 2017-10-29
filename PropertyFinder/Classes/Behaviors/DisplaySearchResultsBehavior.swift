@@ -9,14 +9,8 @@
 import OBehave
 import APDownloader
 
-protocol DisplaySearchResultsBehaviorDataSource: OBBehaviorDataSource {
-    var downloadURL: URL { get }
-    var searchParameters: Parameters { get }
-    var downloader: Downloader { get }
-}
-
 protocol DisplaySearchResultsBehaviorDelegate: OBBehaviorDelegate {
-    func resetSearch(for behavior: DisplaySearchResultsBehavior)
+    func performSearch(for behavior: DisplaySearchResultsBehavior)
 }
 
 class DisplaySearchResultsBehavior: OBBehavior {
@@ -40,56 +34,39 @@ class DisplaySearchResultsBehavior: OBBehavior {
         }
     }
     
-    @IBAction func performSearch(_: UIButton) {
-        let delegate: DisplaySearchResultsBehaviorDelegate? = getDelegate()
-        delegate?.resetSearch(for: self)
-        
-        properties.removeAll()
-        tableView.reloadData()
-        
-        searchForProperties()
-    }
-    
     private var properties: [Property] = []
-    
-    override func setup() {
-        super.setup()
-        searchForProperties()
-    }
 }
 
-private extension DisplaySearchResultsBehavior {
-    func searchForProperties() {
-        guard let delegate: DisplaySearchResultsBehaviorDataSource = getDataSource() else {
-            return
-        }
-
-        let config = HTTP.Config(method: .get, headers: nil, parameters: delegate.searchParameters)
-
-        HTTP.download(url: delegate.downloadURL,
-                      config: config,
-                      downloader: delegate.downloader) { [unowned self] (result: DownloadResult<SearchResponse>) in
+extension DisplaySearchResultsBehavior: PerformSearchBehaviorDelegate {
+    var onDownload: (DownloadResult<SearchResponse>) -> Void {
+        return { [unowned self] (result: DownloadResult<SearchResponse>) in
             switch result {
             case .success(let response):
                 self.properties.append(contentsOf: response.properties)
-
+                
                 DispatchQueue.main.async { [unowned self] in
                     self.insert(response.properties.count, indicesStartingAt: self.properties.count - response.properties.count)
                 }
-
+                
             case .failure(_):
                 fatalError("Totally failed to get this to work")
             }
         }
     }
     
+    func resetSearch(for behavior: PerformSearchBehavior) {
+        properties.removeAll()
+        tableView.reloadData()
+    }
+}
+
+private extension DisplaySearchResultsBehavior {
     func adjustTableViewDisplay() {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: searchView.bounds.size.height, right: 0)
     }
     
     func insert(_ count: Int, indicesStartingAt index: Int) {
         guard index != 0 else {
-            print("Loading \(count) rows")
             tableView.reloadData()
             return
         }
@@ -121,7 +98,6 @@ extension DisplaySearchResultsBehavior: UITableViewDataSource {
         case (0 ..< properties.count):
             let cell: PropertyTableViewCell = tableView.cellForReusableView()
             cell.setProperty(properties[indexPath.row])
-            cell.price.text = "\(indexPath.row)"
             
             return cell
 
@@ -140,7 +116,8 @@ extension DisplaySearchResultsBehavior: UITableViewDelegate {
     /// Infinite scrolling is provided by getting the next page once we get close to the bottom of the table
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if properties.count - indexPath.row == .triggerSearchThreshold {
-            searchForProperties()
+            let delegate: DisplaySearchResultsBehaviorDelegate? = getDelegate()
+            delegate?.performSearch(for: self)
         }
     }
 }
