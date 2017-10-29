@@ -37,6 +37,7 @@ class DisplaySearchResultsBehavior: OBBehavior {
     private var properties: [Property] = []
 }
 
+// MARK: - PerformSearchBehaviorDelegate
 extension DisplaySearchResultsBehavior: PerformSearchBehaviorDelegate {
     var onDownload: (DownloadResult<SearchResponse>) -> Void {
         return { [unowned self] (result: DownloadResult<SearchResponse>) in
@@ -60,6 +61,7 @@ extension DisplaySearchResultsBehavior: PerformSearchBehaviorDelegate {
     }
 }
 
+// MARK: - Private
 private extension DisplaySearchResultsBehavior {
     func adjustTableViewDisplay() {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: searchView.bounds.size.height, right: 0)
@@ -70,8 +72,6 @@ private extension DisplaySearchResultsBehavior {
             tableView.reloadData()
             return
         }
-        
-        print("Inserting \(count) rows, starting at index \(index)")
 
         let indices = (index ..< index + count).map {
             IndexPath(row: $0, section: 0)
@@ -84,12 +84,14 @@ private extension DisplaySearchResultsBehavior {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension DisplaySearchResultsBehavior: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard !properties.isEmpty else {
             return 0
         }
         
+        // Add one for the searching cell
         return properties.count + 1
     }
     
@@ -112,6 +114,7 @@ extension DisplaySearchResultsBehavior: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension DisplaySearchResultsBehavior: UITableViewDelegate {
     /// Infinite scrolling is provided by getting the next page once we get close to the bottom of the table
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

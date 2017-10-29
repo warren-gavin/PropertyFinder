@@ -39,6 +39,7 @@
 		B0C0E95B1FA5F9D50048D43E /* SearchingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0E95A1FA5F9D50048D43E /* SearchingTableViewCell.swift */; };
 		B0C0E95D1FA61F9C0048D43E /* UITableView+SelfSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0E95C1FA61F9C0048D43E /* UITableView+SelfSizing.swift */; };
 		B0C0E95F1FA6275B0048D43E /* PerformSearchBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0E95E1FA6275B0048D43E /* PerformSearchBehavior.swift */; };
+		B0C0E9631FA63D780048D43E /* SearchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0E9621FA63D780048D43E /* SearchParameters.swift */; };
 		B0D81E551FA0EBC50099DC4F /* SearchBehaviorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D81E541FA0EBC50099DC4F /* SearchBehaviorDataSource.swift */; };
 		B0D81E571FA109700099DC4F /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D81E561FA109700099DC4F /* PropertyTableViewCell.swift */; };
 		B0D81E5D1FA109BE0099DC4F /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D81E5C1FA109BE0099DC4F /* ReusableView.swift */; };
@@ -96,6 +97,7 @@
 		B0C0E95A1FA5F9D50048D43E /* SearchingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingTableViewCell.swift; sourceTree = "<group>"; };
 		B0C0E95C1FA61F9C0048D43E /* UITableView+SelfSizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+SelfSizing.swift"; sourceTree = "<group>"; };
 		B0C0E95E1FA6275B0048D43E /* PerformSearchBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformSearchBehavior.swift; sourceTree = "<group>"; };
+		B0C0E9621FA63D780048D43E /* SearchParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParameters.swift; sourceTree = "<group>"; };
 		B0D81E541FA0EBC50099DC4F /* SearchBehaviorDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBehaviorDataSource.swift; sourceTree = "<group>"; };
 		B0D81E561FA109700099DC4F /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
 		B0D81E5C1FA109BE0099DC4F /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				B09B23FC1F9F9885003A7053 /* JSONResponseKeys.swift */,
+				B0C0E9621FA63D780048D43E /* SearchParameters.swift */,
 				B09B24031F9F9FBD003A7053 /* SortParameters.swift */,
 				B05DFA921F9FD0C200CDC704 /* URL+App.swift */,
 			);
@@ -270,8 +273,8 @@
 				B09B23FE1F9F99D0003A7053 /* Broker+Parsing.swift */,
 				B09B24001F9F9AB4003A7053 /* Location+Parsing.swift */,
 				B00B06FB1F9FB0F9004B8E37 /* Price+Parsing.swift */,
-				B02A32591F9FA4A600FD37D3 /* SearchResponse+Parsing.swift */,
 				B05DFA941F9FD4F600CDC704 /* Property+Parsing.swift */,
+				B02A32591F9FA4A600FD37D3 /* SearchResponse+Parsing.swift */,
 			);
 			path = Parsing;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				B09B24061F9FA186003A7053 /* SearchResponse.swift in Sources */,
 				B045AAD21F9F8C1C005D8DA8 /* Currency.swift in Sources */,
 				B045AAD41F9F8C2A005D8DA8 /* Price.swift in Sources */,
+				B0C0E9631FA63D780048D43E /* SearchParameters.swift in Sources */,
 				B0D81E651FA121900099DC4F /* UIImageView+Alamofire.swift in Sources */,
 				B045AACB1F9F8A96005D8DA8 /* Property.swift in Sources */,
 				B09B23F81F9F94D3003A7053 /* Agent+Parsing.swift in Sources */,

@@ -177,6 +177,9 @@
                                                     <integer key="value" value="20"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="performSearch:" destination="dnP-Cg-Ama" eventType="touchUpInside" id="4Lf-WS-pVF"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>

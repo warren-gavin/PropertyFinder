@@ -40,6 +40,7 @@ class PerformSearchBehavior: OBBehavior {
     }
 }
 
+// MARK: - Private
 private extension PerformSearchBehavior {
     func searchForProperties() {
         guard
@@ -58,6 +59,7 @@ private extension PerformSearchBehavior {
     }
 }
 
+// MARK: - DisplaySearchResultsBehaviorDelegate
 extension PerformSearchBehavior: DisplaySearchResultsBehaviorDelegate {
     func performSearch(for behavior: DisplaySearchResultsBehavior) {
         searchForProperties()

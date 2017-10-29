@@ -29,7 +29,7 @@ class SearchBehaviorDataSource: OBBehavior, PerformSearchBehaviorDataSource {
     private var directionIndex = 0
     private var page = 0
     
-    // MARK: DisplaySearchResultsBehaviorDataSource
+    // MARK: PerformSearchBehaviorDataSource
     var downloadURL = URL.baseURL
     var downloader: Downloader = NetworkDownloader()
     var searchParameters: Parameters {
@@ -37,11 +37,20 @@ class SearchBehaviorDataSource: OBBehavior, PerformSearchBehaviorDataSource {
             page += 1
         }
         
-        let sort = SortParameters(criterion: sortCriteria[sortIndex], direction: sortDirection[directionIndex])
-        return [.page:  "\(page)", .order: sort.encoding]
+        let sort = SortParameters(criterion: sortCriteria[sortIndex],
+                                  direction: sortDirection[directionIndex])
+
+        return SearchParameters(page: page, sort: sort).encoding
+    }
+    
+    func resetSearchParameters(for behavior: PerformSearchBehavior) {
+        sortIndex = sortCriteriaSegment?.selectedSegmentIndex ?? 0
+        directionIndex = directionSegment?.selectedSegmentIndex ?? 0
+        page = 0
     }
 }
 
+// MARK: - Private
 private extension SearchBehaviorDataSource {
     func initialize(segmentControl: UISegmentedControl?, with titles: [CustomTextConvertible], startingIndex: Int) {
         zip(titles, (0 ..< titles.count)).forEach {
@@ -50,18 +59,4 @@ private extension SearchBehaviorDataSource {
         
         segmentControl?.selectedSegmentIndex = startingIndex
     }
-}
-
-// MARK: - PerformSearchBehaviorDataSource
-extension SearchBehaviorDataSource {
-    func resetSearchParameters(for behavior: PerformSearchBehavior) {
-        sortIndex = sortCriteriaSegment?.selectedSegmentIndex ?? 0
-        directionIndex = directionSegment?.selectedSegmentIndex ?? 0
-        page = 0
-    }
-}
-
-private extension String {
-    static let page  = "page"
-    static let order = "order"
 }

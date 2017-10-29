@@ -53,4 +53,3 @@ extension UICollectionView {
         self.register(cell, forCellWithReuseIdentifier: String(describing: cell))
     }
 }
-
